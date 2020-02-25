@@ -1,0 +1,7 @@
+--lib qse-md5
+--project-base=quantum-script-extension-md5
+--source-is-separate
+--use-project=quantum-script.static
+--use-project=qse-buffer.static
+--install-dev
+--install-inc=quantum-script-extension
