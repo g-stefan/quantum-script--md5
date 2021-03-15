@@ -1,6 +1,6 @@
 --dll qse-md5
 --project-base=quantum-script-extension-md5
---source-is-separate
+--build-include
 --dll-no-version
 --use-project=quantum-script
 --use-project=qse-buffer
