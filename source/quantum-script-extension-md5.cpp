@@ -14,7 +14,7 @@
 #include "quantum-script-extension-md5-license.hpp"
 #include "quantum-script-extension-md5.hpp"
 #ifndef QUANTUM_SCRIPT_EXTENSION_MD5_NO_VERSION
-#include "quantum-script-extension-md5-version.hpp"
+#	include "quantum-script-extension-md5-version.hpp"
 #endif
 
 #include "quantum-script-variablestring.hpp"
@@ -53,7 +53,6 @@ namespace Quantum {
 					executive->registerInternalExtension("MD5", initExecutive);
 				};
 
-
 				void initExecutive(Executive *executive, void *extensionId) {
 
 					String info = "MD5\r\n";
@@ -82,4 +81,3 @@ extern "C" QUANTUM_SCRIPT_EXTENSION_MD5_EXPORT void quantumScriptExtension(Quant
 	Quantum::Script::Extension::MD5::initExecutive(executive, extensionId);
 };
 #endif
-
