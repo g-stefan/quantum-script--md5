@@ -1,0 +1,11 @@
+// Quantum Script Extension MD5
+// Copyright (c) 2022 Grigore Stefan <g_stefan@yahoo.com>
+// MIT License (MIT) <http://opensource.org/licenses/MIT>
+// SPDX-FileCopyrightText: 2022 Grigore Stefan <g_stefan@yahoo.com>
+// SPDX-License-Identifier: MIT
+
+#include <XYO/QuantumScript.Extension/MD5/Library.rh>
+#include <XYO/QuantumScript.Extension/MD5/Copyright.rh>
+#include <XYO/QuantumScript.Extension/MD5/Version.rh>
+
+XYO_APPLICATION_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_MD5,"quantum-script--md5.dll","Quantum Script Extension MD5")
