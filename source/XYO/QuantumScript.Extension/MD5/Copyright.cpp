@@ -13,7 +13,6 @@ namespace XYO::QuantumScript::Extension::MD5::Copyright {
 	static const char *publisher_ = XYO_QUANTUMSCRIPT_EXTENSION_MD5_PUBLISHER;
 	static const char *company_ = XYO_QUANTUMSCRIPT_EXTENSION_MD5_COMPANY;
 	static const char *contact_ = XYO_QUANTUMSCRIPT_EXTENSION_MD5_CONTACT;
-	static const char *fullCopyright_ = XYO_QUANTUMSCRIPT_EXTENSION_MD5_FULL_COPYRIGHT;
 
 	const char *copyright() {
 		return copyright_;
@@ -29,10 +28,6 @@ namespace XYO::QuantumScript::Extension::MD5::Copyright {
 
 	const char *contact() {
 		return contact_;
-	};
-
-	const char *fullCopyright() {
-		return fullCopyright_;
 	};
 
 };

@@ -14,44 +14,43 @@
 
 namespace XYO::QuantumScript::Extension::MD5 {
 
-				static TPointer<Variable> hash(VariableFunction *function, Variable *this_, VariableArray *arguments) {
+	static TPointer<Variable> hash(VariableFunction *function, Variable *this_, VariableArray *arguments) {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
-					printf("- md5-hash\n");
+		printf("- md5-hash\n");
 #endif
 
-					return VariableString::newVariable(XYO::Cryptography::MD5::hash((arguments->index(0))->toString()));
-				};
+		return VariableString::newVariable(XYO::Cryptography::MD5::hash((arguments->index(0))->toString()));
+	};
 
-				static TPointer<Variable> hashToBuffer(VariableFunction *function, Variable *this_, VariableArray *arguments) {
+	static TPointer<Variable> hashToBuffer(VariableFunction *function, Variable *this_, VariableArray *arguments) {
 #ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
-					printf("- md5-hash-to-buffer\n");
+		printf("- md5-hash-to-buffer\n");
 #endif
-					TPointer<Variable> retV(Extension::Buffer::VariableBuffer::newVariable(16));
-					((Extension::Buffer::VariableBuffer *)retV.value())->buffer.length = 16;
-					XYO::Cryptography::MD5::hashToU8((arguments->index(0))->toString(), ((Extension::Buffer::VariableBuffer *)retV.value())->buffer.buffer);
-					return retV;
-				};
+		TPointer<Variable> retV(Extension::Buffer::VariableBuffer::newVariable(16));
+		((Extension::Buffer::VariableBuffer *)retV.value())->buffer.length = 16;
+		XYO::Cryptography::MD5::hashToU8((arguments->index(0))->toString(), ((Extension::Buffer::VariableBuffer *)retV.value())->buffer.buffer);
+		return retV;
+	};
 
-				void registerInternalExtension(Executive *executive) {
-					executive->registerInternalExtension("MD5", initExecutive);
-				};
+	void registerInternalExtension(Executive *executive) {
+		executive->registerInternalExtension("MD5", initExecutive);
+	};
 
-				void initExecutive(Executive *executive, void *extensionId) {
+	void initExecutive(Executive *executive, void *extensionId) {
 
-					String info = "MD5\r\n";
-					info << License::shortLicense();
+		String info = "MD5\r\n";
+		info << License::shortLicense();
 
-					executive->setExtensionName(extensionId, "MD5");
-					executive->setExtensionInfo(extensionId, info);
-					executive->setExtensionVersion(extensionId, Extension::MD5::Version::versionWithBuild());
-					executive->setExtensionPublic(extensionId, true);
+		executive->setExtensionName(extensionId, "MD5");
+		executive->setExtensionInfo(extensionId, info);
+		executive->setExtensionVersion(extensionId, Extension::MD5::Version::versionWithBuild());
+		executive->setExtensionPublic(extensionId, true);
 
-					executive->compileStringX("Script.requireExtension(\"Buffer\");");
-					executive->compileStringX("var MD5={};");
-					executive->setFunction2("MD5.hash(str)", hash);
-					executive->setFunction2("MD5.hashToBuffer(str)", hashToBuffer);
-				};
-
+		executive->compileStringX("Script.requireExtension(\"Buffer\");");
+		executive->compileStringX("var MD5={};");
+		executive->setFunction2("MD5.hash(str)", hash);
+		executive->setFunction2("MD5.hashToBuffer(str)", hashToBuffer);
+	};
 
 };
 
