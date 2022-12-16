@@ -15,7 +15,7 @@
 namespace XYO::QuantumScript::Extension::MD5 {
 
 	static TPointer<Variable> hash(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- md5-hash\n");
 #endif
 
@@ -23,7 +23,7 @@ namespace XYO::QuantumScript::Extension::MD5 {
 	};
 
 	static TPointer<Variable> hashToBuffer(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- md5-hash-to-buffer\n");
 #endif
 		TPointer<Variable> retV(Extension::Buffer::VariableBuffer::newVariable(16));
