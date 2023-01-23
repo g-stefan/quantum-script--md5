@@ -55,7 +55,7 @@ namespace XYO::QuantumScript::Extension::MD5 {
 };
 
 #ifdef XYO_COMPILE_DYNAMIC_LIBRARY
-extern "C" void quantumScriptExtension(XYO::QuantumScript::Executive *executive, void *extensionId) {
+extern "C" XYO_QUANTUMSCRIPT_EXTENSION_MD5_EXPORT void quantumScriptExtension(XYO::QuantumScript::Executive *executive, void *extensionId) {
 	XYO::QuantumScript::Extension::MD5::initExecutive(executive, extensionId);
 };
 #endif
