@@ -13,8 +13,8 @@
 
 namespace XYO::QuantumScript::Extension::MD5::License {
 
-	XYO_QUANTUMSCRIPT_EXTENSION_MD5_EXPORT const char *license();
-	XYO_QUANTUMSCRIPT_EXTENSION_MD5_EXPORT const char *shortLicense();
+	XYO_QUANTUMSCRIPT_EXTENSION_MD5_EXPORT std::string license();
+	XYO_QUANTUMSCRIPT_EXTENSION_MD5_EXPORT std::string shortLicense();
 
 };
 

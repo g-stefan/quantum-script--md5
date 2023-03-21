@@ -39,7 +39,7 @@ namespace XYO::QuantumScript::Extension::MD5 {
 	void initExecutive(Executive *executive, void *extensionId) {
 
 		String info = "MD5\r\n";
-		info << License::shortLicense();
+		info << License::shortLicense().c_str();
 
 		executive->setExtensionName(extensionId, "MD5");
 		executive->setExtensionInfo(extensionId, info);
