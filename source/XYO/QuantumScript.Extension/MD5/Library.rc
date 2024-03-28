@@ -8,4 +8,4 @@
 #include <XYO/QuantumScript.Extension/MD5/Copyright.rh>
 #include <XYO/QuantumScript.Extension/MD5/Version.rh>
 
-XYO_APPLICATION_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_MD5,"quantum-script--md5.dll","Quantum Script Extension MD5")
+XYO_PLATFORM_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_MD5,"quantum-script--md5.dll","Quantum Script Extension MD5")
